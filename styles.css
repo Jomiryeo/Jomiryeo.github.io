@@ -1,0 +1,98 @@
+/* General Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .nav-links.active {
+        display: block;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .navbar .nav-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section {
+        padding: 80px 50px;
+    }
+}
